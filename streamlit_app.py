@@ -68,11 +68,11 @@ def dataset_testing_tab():
     def load_dataset(dataset_name):
         try:
             if dataset_name == "CISM":
-                return pd.read_excel("/content/drive/MyDrive/cism_eng_dataset.xlsx")
+                return pd.read_excel("cism_eng_dataset.xlsx")
             elif dataset_name == "CISSP":
-                return pd.read_excel("/content/drive/MyDrive/cissp_eng_dataset.xlsx")
+                return pd.read_excel("cissp_eng_dataset.xlsx")
             elif dataset_name == "CISSP5":
-                return pd.read_excel("/content/drive/MyDrive/cissp_eng_5.xlsx")
+                return pd.read_excel("cissp_eng_5.xlsx")
         except Exception as e:
             st.error(f"Ошибка загрузки датасета: {e}")
             return None
