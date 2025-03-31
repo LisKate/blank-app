@@ -1,1 +1,7 @@
 streamlit
+openai
+anthropic
+yandex_cloud_ml_sdk
+mistralai
+xlsxwriter
+openpyxl
