@@ -73,11 +73,13 @@ def dataset_testing_tab():
                 return pd.read_excel("cissp_eng_dataset.xlsx")
             elif dataset_name == "CISSP5":
                 return pd.read_excel("cissp_eng_5.xlsx")
+            elif dataset_name == "CISSP5":
+                return pd.read_excel("тест.xlsx")
         except Exception as e:
             st.error(f"Ошибка загрузки датасета: {e}")
             return None
 
-    dataset_name = st.selectbox("Выберите датасет", ["CISM", "CISSP", "CISSP5"])
+    dataset_name = st.selectbox("Выберите датасет", ["CISM", "CISSP", "CISSP5","тест"])
     dataset = load_dataset(dataset_name)
 
     if dataset is not None:
