@@ -73,7 +73,7 @@ def dataset_testing_tab():
                 return pd.read_excel("cissp_eng_dataset.xlsx")
             elif dataset_name == "CISSP5":
                 return pd.read_excel("cissp_eng_5.xlsx")
-            elif dataset_name == "CISSP5":
+            elif dataset_name == "тест":
                 return pd.read_excel("тест.xlsx")
         except Exception as e:
             st.error(f"Ошибка загрузки датасета: {e}")
