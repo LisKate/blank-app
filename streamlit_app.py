@@ -45,7 +45,7 @@ clients = init_clients()
 # Модели для тестирования
 MODELS = {
     "Claude3.5": {"provider": "anthropic", "model": "claude-3-sonnet-20240229"},
-    "Claude3.7": {"provider": "anthropic", "model": "claude-3-haiku-20240307"},
+    "Claude3.7": {"provider": "anthropic", "model": "claude-3-7-sonnet-20250219"},
     "DeepSeek-V3": {"provider": "nebius", "model": "deepseek-ai/DeepSeek-V3"},
     "DeepSeek-R1": {"provider": "nebius", "model": "deepseek-ai/DeepSeek-R1"},
     "Grok-2": {"provider": "openrouter", "model": "x-ai/grok-2-1212"},
@@ -113,7 +113,7 @@ def test_model(model_name, dataset):
                     response = clients["anthropic"].messages.create(
                         model=model_info["model"],
                         messages=[{"role": "user", "content": f"{system_prompt}\n{question}"}],
-                        max_tokens=50
+                        max_tokens=2048
                     )
                     answer = response.content[0].text.strip()
 
